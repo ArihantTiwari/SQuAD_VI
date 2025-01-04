@@ -119,7 +119,7 @@ with st.container():
 
         st.subheader("Cluster Visualization")
         #plot_BAL_clusters(pca_BAL, model_BAL)
-        df_Coords = pd.read_csv('/Users/arihanttiwari/Documents/VI_App/PCA_Coords.csv')
+        df_Coords = pd.read_csv('PCA_Coords.csv')
 
         import pickle
 
