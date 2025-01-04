@@ -20,7 +20,7 @@ col2.title("SQuAD Anomaly Visual Inspector")
 # READ THE VANDEN BERK COMPOSITE AND DEFINE WAVELENGTH WINDOW
 #####################################################################################
 wavelength = np.arange(1300,3001,2)
-with open('/Users/arihanttiwari/Documents/Thesis/New_Data/Vanden_Berk.rtf', 'r') as file:
+with open('Vanden_Berk.rtf', 'r') as file:
     rtf_content = file.read()
 
 # Convert RTF to plain text
