@@ -124,13 +124,14 @@ with st.container():
         import pickle
 
         # Load variables (adjust paths if necessary)
-        with open('variables.pkl', 'rb') as f:
-            data = pickle.load(f)
+        with open('model_BAL.pkl', 'rb') as f:
+            model_BAL = pickle.load(f)
 
-        temp_BAL = data['temp_BAL']
-        pca_BAL = data['pca_BAL']
-        model_BAL = data['model_BAL']
+        with open('pca_BAL.pkl', 'rb') as f:
+            pca_BAL = pickle.load(f)
 
+        with open('Cluster.pkl', 'rb') as f:
+            temp_BAL = pickle.load(f)
         
         # Get the PLATE, MJD, FIBERID for the selected row
         selected_row = df.iloc[row_index]
@@ -144,7 +145,7 @@ with st.container():
         # Prepare data for PCA clusters
         x = np.array(pca_BAL.iloc[:, 0])
         y = np.array(pca_BAL.iloc[:, 1] * -1)  # Invert PCA 2 axis for consistency
-        group = temp_BAL['Cluster']
+        group = temp_BAL
         cluster_centers = model_BAL.cluster_centers_
 
         # Define color dictionary for clusters
