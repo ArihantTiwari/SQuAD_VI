@@ -9,7 +9,7 @@ import os
 
 # Define the folder containing the dataframes
 DATA_FOLDER = "Spectra/"
-DISPLAY_FOLDER = "/Users/arihanttiwari/Documents/Thesis/Latex_Table"
+DISPLAY_FOLDER = "Meta_Data/"
 apptitle = "SQuAD Visual Inspector"
 st.set_page_config(page_title=apptitle, layout='wide',initial_sidebar_state='collapsed')
 padding_top = 0
