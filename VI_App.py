@@ -218,7 +218,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Load dataset
-tot = pd.read_csv('UV_Line_Data.csv')
+tot = pd.read_csv('UV_Data.csv')
 abk = df_display[['PLATE','MJD','FIBERID']]
 abk = abk.merge(tot,on=['PLATE','MJD','FIBERID'],how='inner')
 
